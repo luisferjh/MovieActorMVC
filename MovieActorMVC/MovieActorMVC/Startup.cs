@@ -7,8 +7,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using MovieActorMVC.Data;
 
 namespace MovieActorMVC
 {
@@ -33,7 +35,7 @@ namespace MovieActorMVC
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            //services.AddDbContext<MovieActorMVC>(options => options.useSqlServer());
+            services.AddDbContext<MovieDbContext>(options => options.UseSqlServer(@"Server=LAPTOP-9LBNL0E3;Database=ConsoleMovieDB1;Trusted_Connection=True;ConnectRetryCount=0"));
 
         }
 
