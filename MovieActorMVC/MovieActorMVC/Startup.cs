@@ -35,7 +35,7 @@ namespace MovieActorMVC
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddDbContext<MovieDbContext>(options => options.UseSqlServer(@"Server=LAPTOP-9LBNL0E3;Database=ConsoleMovieDB1;Trusted_Connection=True;ConnectRetryCount=0"));
+            services.AddDbContext<MovieDbContext>(options => options.UseSqlServer(@"Server=LAPTOP-9LBNL0E3;Database=MovieDB1MVC;Trusted_Connection=True;ConnectRetryCount=0"));
 
         }
 
